@@ -1,0 +1,398 @@
+:root {
+  --cs-bg: #1165bb;
+  /* background */
+  --cs-text: #ffffff;
+  /* text color */
+  --cs-accent: rgba(255, 255, 255, 0.3);
+  /* divider */
+  --cs-gap: 18px;
+  --cs-pad-y: 18px;
+  --cs-pad-x: 16px;
+  --cs-radius: 999px;
+  /* pill look */
+  --cs-font: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --cs-icon: 20px;
+}
+
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-top: 70px;
+  /* same as header height */
+}
+
+.navbar,
+.footer {
+  background-color: #faf8f6;
+  color: #000000;
+}
+
+.logo img {
+  width: 78px;
+}
+
+li.nav-item {
+  font-family: 'Poppins';
+}
+
+
+/* Fixed Header */
+.fixed-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  background: url('./images/background.jpg') no-repeat center center/cover;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+.hero-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 0;
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Headings */
+.hero-header {
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.hero-header2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Form */
+.form-box {
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.form-box input,
+.form-box textarea {
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.form-box .btn {
+  background: #1165bb;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.form-box .btn:hover {
+  background: #000;
+}
+
+/* service */
+.services-section h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+  color: #222;
+}
+
+.services-section p {
+  font-size: 1.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #222;
+}
+
+.service-box p {
+  font-size: 16px;
+}
+
+.service-box {
+  background: #fff;
+  color: #000;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.service-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.service-box .icon i {
+  color: #1165bb;
+}
+
+/* About Us Section Styling */
+.about-section {
+  background-color: #1165bb;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-section h2 {
+  font-size: 3rem;
+  color: white;
+}
+
+.about-section p {
+  color: white;
+}
+
+/* Section styling */
+.what-we-do {
+  background-color: #ffffff;
+  /* previously inline */
+  color: #555;
+  /* default text color */
+  font-family: 'Poppins', sans-serif;
+}
+
+.what-we-box {
+  background-color: #1165bb;
+  color: white;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.what-we-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading color */
+.what-we-do h2 {
+  font-size: 3rem;
+  color: #000000;
+}
+
+/* CTA Section */
+.cta-section {
+  position: relative;
+  background-image: url('./images/cta-bg.jpg');
+  /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 100px 20px;
+  /* Desktop: 100px top/bottom */
+}
+
+.cta-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.cta-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-section h2 {
+  font-size: 3rem;
+}
+
+.contact-strip {
+  background: var(--cs-bg);
+  color: var(--cs-text);
+  font-family: var(--cs-font);
+}
+
+.contact-container {
+  margin: 0 auto;
+  padding: var(--cs-pad-y) var(--cs-pad-x);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--cs-gap);
+  flex-wrap: nowrap;
+  /* keep one line on wide screens */
+}
+
+
+.contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--cs-text);
+  padding: 10px 14px;
+  border-radius: var(--cs-radius);
+  line-height: 1.2;
+  transition: transform .15s ease, background-color .15s ease, opacity .15s ease;
+  white-space: nowrap;
+  /* keep text on one line */
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-item:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-item .icon {
+  width: var(--cs-icon);
+  height: var(--cs-icon);
+  display: inline-block;
+  fill: currentColor;
+  flex: 0 0 auto;
+}
+
+.divider {
+  width: 1px;
+  height: 22px;
+  background: var(--cs-accent);
+  flex: 0 0 auto;
+}
+
+
+
+/* Common CSS */
+.marginTopBottom {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.btn-common {
+  display: inline-block;
+  background-color: #f09c00;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  font-family: "Poppins", sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+.btn-common:hover {
+  background-color: #f09c00;
+  text-decoration: none;
+  color: #fff;
+}
+
+
+/* XL Container */
+@media (min-width: 1400px) {
+  .custom-container {
+    max-width: 1140px !important;
+  }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 992px) {
+  .hero-header {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero-header2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .hero-section p.lead {
+    text-align: center;
+  }
+
+  .form-box {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-header {
+    font-size: 2.5rem;
+  }
+
+  .hero-header2 {
+    font-size: 1.8rem;
+  }
+
+  .form-box {
+    padding: 20px;
+  }
+
+  .about-section {
+    text-align: center;
+  }
+
+  .marginTopBottom {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .contact-container {
+    flex-wrap: wrap;
+    /* allow wrap on phones */
+    gap: 10px 14px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  /* hide dividers when wrapped */
+  .contact-item {
+    width: 100%;
+    justify-content: center;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .hero-header {
+    font-size: 2rem;
+  }
+
+  .hero-header2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-section {
+    padding: 60px 15px;
+    min-height: auto;
+  }
+
+  .form-box {
+    margin-top: 20px;
+  }
+
+  .marginTopBottom {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
